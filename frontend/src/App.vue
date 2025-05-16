@@ -32,4 +32,8 @@ html, body {
 nav {
   margin-bottom: 20px; /* NavBar ile içerik arasına boşluk */
 }
+
+a {
+   text-decoration: none !important;
+}
 </style>

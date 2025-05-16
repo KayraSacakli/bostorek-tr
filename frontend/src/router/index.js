@@ -4,6 +4,7 @@ import ContactView from "@/views/ContactView.vue";
 import LoginView from "@/views/LoginView.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import BooksView from "@/views/BooksView.vue"; 
+import BookDetailView from "@/views/BookDetailView.vue";
 
 
 
@@ -31,6 +32,11 @@ const router = createRouter ({
             component: BooksView
         },
         {
+            path:"/books/:id",
+            name:"book-detail",
+            component: BookDetailView
+        },
+        {
             path:"/contact",
             name:"Contact", 
             component: ContactView
@@ -40,6 +46,13 @@ const router = createRouter ({
             name:"Login", 
             component: LoginView
         },
-    ]
+        {
+            path: "/:pathMatch(.*)*",
+            name: "NotFound",
+            component: () => import("@/views/NotFoundView.vue"),
+}
+
+    ],
+    linkActiveClass:'active-link'
 });
 export default router;

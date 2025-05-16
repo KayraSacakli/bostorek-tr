@@ -1,15 +1,11 @@
 <template>
-    <div>
-        RegisterView Page
-    </div>
+  <div>RegisterView Page</div>
 </template>
 
 <script>
-    export default {
-        name:"RagisterView"
-    }
+export default {
+  name: "RagisterView",
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -1,15 +1,11 @@
 <template>
-    <div>
-        LoginView Page
-    </div>
+  <div>LoginView Page</div>
 </template>
 
 <script>
-    export default {
-        name:"LoginView"
-    }
+export default {
+  name: "LoginView",
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

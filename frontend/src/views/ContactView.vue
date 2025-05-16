@@ -1,15 +1,20 @@
 <template>
-    <div>
-        ContactView Page
-    </div>
+  <div>
+    <SectionHeader
+      title="Contact Us"
+      text="Herhangi bir navigasyonu durdurun ve sonucunu kesin olarak kontrol edin."
+    />
+  </div>
 </template>
 
 <script>
-    export default {
-        name:"ContactView"
-    }
+import SectionHeader from "@/components/SectionHeader.vue";
+export default {
+  name: "ContactView",
+  components: {
+    SectionHeader,
+  },
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -1,23 +1,35 @@
 <template>
   <nav class="navbar navbar-expand-md custom-nav">
     <div class="container">
-      <router-link class="navbar-brand" to="/home">{{ brandName }}</router-link>
+      <router-link class="navbar-brand" :to="{ name: 'Home' }">{{
+        brandName
+      }}</router-link>
 
       <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
         <li class="nav-item">
-          <router-link class="nav-link" to="/home">Home</router-link>
+          <router-link class="nav-link" :to="{ name: 'Home' }"
+            >Home</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/books">Books</router-link>
+          <router-link class="nav-link" :to="{ name: 'Books' }"
+            >Books</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/contact">Contact Us</router-link>
+          <router-link class="nav-link" :to="{ name: 'Contact' }"
+            >Contact Us</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/login">Login</router-link>
+          <router-link class="nav-link" :to="{ name: 'Login' }"
+            >Login</router-link
+          >
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/register">Register</router-link>
+          <router-link class="nav-link" :to="{ name: 'Register' }"
+            >Register</router-link
+          >
         </li>
       </ul>
     </div>
@@ -48,11 +60,15 @@ export default {
 }
 
 .nav-link {
+  padding: 10px 15px;
   color: white;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  text-decoration: underline;
+  color: #44b89d;
+}
+.navbar .nav-link.active-link {
+  color: #44b89d;
 }
 </style>
