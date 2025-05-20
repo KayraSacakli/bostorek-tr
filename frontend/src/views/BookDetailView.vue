@@ -5,7 +5,14 @@
         :title="book.name"
         :text="book.author"
       />
-      <button>Back</button>
+      <font-awesome-icon 
+        :icon="['fas', 'arrow-left']" 
+        style="font-size: 32px; color: var(--primary-color); margin-right: 10px; cursor: pointer" 
+        @click="goToBackBooks"
+        class="mb-2" 
+      />
+
+
 
       <div class="row">
         <div class="col-lg-6">
@@ -45,10 +52,10 @@
                     Recusandae odit, labore non quisquam sit amet.
                   </p>
                   <div class="d-flex justify-content-between"></div>
-                  <p class="fw-bold fst-italic"></p>
-                  <div class="d-flex align-items-center">
-                    <p>update</p>
-                    <p class="ps-2"><strong>8</strong></p>
+                  <p class="fw-bold fst-italic">jhon doe</p>
+                  <div class="d-flex justify-content-end aligin-items-center mb+2">
+                    <font-awesome-icon icon="thumbs-up" />
+                    <p class="ps-2 mb-0"><strong>8</strong></p>
                   </div>
                 </div>
               </div>
@@ -78,6 +85,11 @@ export default {
     const bookId = this.$route.params.id;
     this.book = books.find(book => book.id === parseInt(bookId));
   },
+  methods:{
+    goToBackBooks() {
+      this.$router.push({name:"Books"})
+    }
+  }
 };
 </script>
 
